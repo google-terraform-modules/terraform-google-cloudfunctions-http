@@ -3,7 +3,7 @@
 resource "google_storage_bucket_object" "archive_function" {
   name   = "${var.bucket_archive_name}"
   bucket = "${var.bucket_name}"
-  source = "${var.bucket_path}"
+  source = "${var.local_path}"
 }
 
 # Create new CloudFunction
