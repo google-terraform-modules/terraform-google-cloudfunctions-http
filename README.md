@@ -11,10 +11,10 @@ resource "google_storage_bucket" "bucket" {
 }
 
 module "cloudfunction" {
-  source               = "github.com/google-terraform-modules/terraform-google-http-cloudfunctions"
+  source               = "github.com/google-terraform-modules/terraform-google-cloudfunctions-http"
   bucket_name          = "${google_storage_bucket.bucket.name}"
-  bucket_path          = "${path.module}/code/helloHttp.zip"
   bucket_archive_name  = "helloHttp.zip"
+  local_path           = "${path.module}/code/helloHttp.zip"
   function_name        = "helloHttp"
   function_entry_point = "helloHttp"
 }
