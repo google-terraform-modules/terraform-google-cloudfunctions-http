@@ -1,10 +1,11 @@
 # Google HTTP CloudFunctions
 
-Compatible provider `1.8`
+Compatible provider `1.8.0 - 1.12.0`
 
 ## Example
 
 * 1 function, timeout 30s
+
 ```hcl
 resource "google_storage_bucket" "bucket" {
   name = "test-bucket-cloudfunction"
