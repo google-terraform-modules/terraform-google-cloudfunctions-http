@@ -17,4 +17,5 @@ resource "google_cloudfunctions_function" "function" {
   trigger_http          = true
   timeout               = "${var.function_timeout}"
   entry_point           = "${var.function_entry_point}"
+  runtime               = "${var.function_runtime}"s
 }

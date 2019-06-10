@@ -30,6 +30,12 @@ variable "function_entry_point" {
   description = "Name of a JavaScript function that will be executed when the Google Cloud Function is triggered"
 }
 
+variable "function_runtime" {
+  type        = "string"
+  default     = "nodejs10"
+  description = "Runtime for the Google cloud function eg. nodejs10"
+}
+
 ############################
 ###        BUCKET        ###
 ############################
